@@ -14,3 +14,26 @@ Notes:  dedicated_account_adjustment_amount = initila value in case of replica d
 First filter must be on category = pospaid
 second filter is service name should be exist (not null)
 third:if service name is not available in the cfg file then don't write the MSISDN record in file output file. 
+
+NSN DUMP:
+
+1(total_transactions),100(total_amount),INR(Fixed),230(Fixed),4(Fixed)
+
+
+9637904901(UID),,,,,,,,1,11(DA_ID),100(pcsSubSrvThreshQuota - pcsSrvTotUsedQuota),FFFFFFFFFFFFFF,,,,,,,,,,,,,,,,,
+                   
+Note :
+
+    dedicated_account_adjustment_amount = pcsSubSrvThreshQuota value in case of replica da
+     dedicated_account_adjustment_amount =  pcsSubSrvThreshQuota - pcsSrvTotUsedQuota), in case of main da
+    DA_ID is based on the pcsServiceElementName and its value will be caputred from the cfg file 
+
+First filter must be on pcsServiceBillResetType = date
+second filter is pcsServiceElementName  should be exist (not null)
+third:if pcsServiceElementName is not available in the cfg file then don't write the MSISDN record in file output file.
+
+if  pcsServiceID = 110 and 130 for One msisdn
+
+  In this case dedicated_account_adjustment_amount  = (pcsSubSrvThreshQuota - pcsSrvTotUsedQuota) + 130's ( pcsSubSrvThreshQuota - pcsSrvTotUsedQuota)
+
+  And need to create One record  only.
