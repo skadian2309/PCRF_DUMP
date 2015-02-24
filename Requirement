@@ -37,3 +37,5 @@ if  pcsServiceID = 110 and 130 for One msisdn
   In this case dedicated_account_adjustment_amount  = (pcsSubSrvThreshQuota - pcsSrvTotUsedQuota) + 130's ( pcsSubSrvThreshQuota - pcsSrvTotUsedQuota)
 
   And need to create One record  only.
+
+and if pcsSubSrvThreshQuota is 1, in this we don't require to get the 130 record.   
