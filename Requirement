@@ -1,0 +1,16 @@
+HUAWEI DUMP:
+
+1(total_transactions),100(total_amount),INR(Fixed),230(Fixed),4(Fixed)
+
+MAPPING Conent:
+
+
+
+9637904901(MSISDN),,,,,,,,1,DA_ID ,balance,FFFFFFFFFFFFFF,,,,,,,,,,,,,,,,,
+
+Notes:  dedicated_account_adjustment_amount = initila value in case of replica da
+             dedicated_account_adjustment_amount = balance value in case of main da
+
+First filter must be on category = pospaid
+second filter is service name should be exist (not null)
+third:if service name is not available in the cfg file then don't write the MSISDN record in file output file. 
